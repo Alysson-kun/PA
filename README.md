@@ -3,6 +3,6 @@
 
  Integrantes:
  
- Alysson Ferreira da Silva
+ Alysson Ferreira da Silva;
  
- Sthefania Fernandes Silva
+ Sthefania Fernandes Silva.
