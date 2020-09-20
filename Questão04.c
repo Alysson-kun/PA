@@ -73,4 +73,13 @@ foram obtidas as respostas esperadas).*/
   idade = *p4;
   printf("%d \n", idade); // Como "p4" está com o endereço de vetor[2], ao atribuir p4=p4-2 estamos guardando em "p4" o endereço de vetor[0] novamente, logo idade é 31.
 
+    /* (m) */
+  p5 = &vetor[2] - 1;
+  printf("%d \n", *p5);
+  
+  /* (n) */
+  p5++;
+  printf("%d \n", *p5);
+  return(0);
+
 }
