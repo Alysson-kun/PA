@@ -75,11 +75,11 @@ foram obtidas as respostas esperadas).*/
 
     /* (m) */
   p5 = &vetor[2] - 1;
-  printf("%d \n", *p5); // "p5" irá receber o enderço da posição 2 de "vetor" decrementada uma vez. Ou seja, o p5 recebe valor de vetor[1]. Imprimir p5 retorna 45.
+  printf("%d \n", *p5); // "p5" irá receber o endereço da posição 2 de "vetor" decrementada uma vez. Ou seja, o p5 recebe valor de vetor[1]. Imprimir p5 retorna 45.
   
   /* (n) */
   p5++;
-  printf("%d \n", *p5); // Incrementando uma posição em p5 que até o momento guardava o endereço de vetor[1], o faz voltar a guardar o endereço de vetor[2]. Imprimir p5 retorna 27;
+  printf("%d \n", *p5); // Incrementando uma posição em p5 que até o momento guardava o endereço de vetor[1], o faz voltar a guardar o endereço de vetor[2]. Imprimir p5 retorna 27.
   return(0);
 
 }
