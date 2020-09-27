@@ -29,5 +29,5 @@ int main(){
     for(int i=0;i<4;i++){
         printf("%d ",x3+i);
     }
-    //Se os valores hipotéticos de bytes para os tipos de variavel da questão 9 fossem reais, a impressão teria sido conforme ilustrado  na questão 9. Ou seja, a logica eh somar aos enderecos de memoria o numero de bytes de cada variavel para obter o proximo endereco.
+    //Se os valores hipotéticos de bytes para os tipos de variavel da questão 9 fossem reais, a impressão teria sido conforme ilustrado  na questão 9. Ou seja, a logica é somar aos endereços de memoria o numero de bytes de cada variavel para obter o endereco da proxima posicao.
 }
