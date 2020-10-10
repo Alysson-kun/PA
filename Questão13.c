@@ -6,16 +6,16 @@ int main(){
 //Implemente em linguagem C uma função em um programa de computador que leia n valores do tipo float e os apresente em ordem crescente. Utilize alocação dinâmica de memória para realizar a tarefa.
 
     float *p;
-    int n;
+    unsigned int n;
     printf ("tamanho do vetor: ");
-    scanf ("%d", n);
-    p = malloc(n*sizeof(float));
+    scanf ("%d", &n);
+    p = malloc(n * sizeof(float) );
     p[1]=2.5;
-    printf ("%f2 \n", p[1]);
+    printf ("%f \n", p[1]);
 
     /*printf ("preencha o vetor: ");
     for (int i=0; i<n; i++)
-        scanf ("%f \n", p[i]);
+        scanf ("%f \n", &p[i]);
 
     for (int j=0; j<n; j++)
     {
@@ -33,5 +33,5 @@ int main(){
         printf ("%f \n", p[i]);*/
 
     free(p);
-
+    return 0;
 }
