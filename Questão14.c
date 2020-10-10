@@ -2,9 +2,7 @@
 
 int main (void){
     
-    float aloha[10], coisas[10][5], *pf, value = 2.2;
-    int i=3;
-    pf= aloha;
+    //Reimplemente o programa da questão anterior utilizando a função qsort() do C. Comente o seu código, explicando o que faz cada uma das linhas.
     
 
 }
