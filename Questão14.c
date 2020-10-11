@@ -1,10 +1,37 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-int main (void){
-    
-    float aloha[10], coisas[10][5], *pf, value = 2.2;
-    int i=3;
-    pf= aloha;
-    
+/*Reimplemente o programa da questão anterior utilizando a função qsort() do C. Comente o seu
+código, explicando o que faz cada uma das linhas.*/
 
+int comparar(const void * a, const void * b)
+{
+  return ( *(float*)a - *(float*)b );
+}
+
+int main()
+{
+    
+    unsigned int n;
+    printf ("tamanho do vetor: \n");
+    scanf ("%d", &n);
+    float *p;
+    p = malloc(n * sizeof(float) );
+    
+    printf ("preencha o vetor: \n");
+    for (int i=0; i<n; i++)
+        {
+            scanf ("%f", &p[i]);
+        }
+    
+    qsort(p, n, sizeof(float), comparar);
+
+    printf ("vetor ordenado: \n");
+    for (int i=0; i<n; i++)
+    {
+        printf ("%f \n", p[i]);
+    }
+
+    free(p);
+    return 0;
 }
