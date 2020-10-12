@@ -4,9 +4,9 @@
 /*Reimplemente o programa da questão anterior utilizando a função qsort() do C. Comente o seu
 código, explicando o que faz cada uma das linhas.*/
 
-int comparar(const void * a, const void * b)
+int comparar(const void * a, const void * b) // Implementando a função comparar que recebe dois ponteiros genericos com const (para prover maior proteção de dados), a função do ponteiro generico é poder alterar o tipo do endereço em outro momento
 {
-  return ( *(float*)a - *(float*)b );
+  return ( *(float*)a - *(float*)b ); // É alterado o tipo do ponteiro para float e depois de recuperado o conteúdo guardado nesses endereços é feita a subtração, retornando o valor resultante
 }
 
 int main()
