@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int comparar(const float *a, const float *b)
+int comparar( float *a,  float *b)
 {
         if ( *a < *b ) return 0;
         if ( *a > *b ) return 1;
 }
 
 
-void ordenar (int n, float *p, int(*ponteiro_f)(float*,float*))
+void ordenar (int n, float *p, int(*ponteiro_f)( float*,  float*))
 {
     for (int i=0; i<n; i++)
     {
@@ -42,8 +42,8 @@ int main()
             scanf ("%f", &p[i]);
         }
 
-    int(*ponteiro_f)(float*,float*) = comparar;
-    ordenar(p, n, ponteiro_f);
+    int(*ponteiro_f)( float*,  float*) = comparar;
+    ordenar(n, p, ponteiro_f);
 
     printf ("vetor ordenado: \n");
     for (int i=0; i<n; i++)
