@@ -1,17 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/*Implemente em linguagem C uma função em um programa de computador que leia n valores do
-tipo float e os apresente em ordem crescente. Utilize alocação dinâmica de memória para
-realizar a tarefa.*/
+void comparar(const void * a, const void * b) // Implementando a função comparar que recebe dois ponteiros genericos com const (para prover maior proteção de dados), o objetivo do ponteiro generico é poder alterar o tipo do endereço em outro momento
+{
+    //p[j]>p[j+1]
+        if ( *(int*)a <= *(int*)b ) return 0;
+        if ( *(int*)a >  *(int*)b ) return 1;
+}
 
-void ordernar(int n, float *p)
+
+void ordenar (void *p, unsigned int n, sizeof(float), float (*p) (float))
 {
     for (int i=0; i<n; i++)
     {
             for (int j=0; j<n-1; j++)
             {
-                if(p[j]>p[j+1])
+                if(comparar==1)
                 {
                     float aux;
                     aux=p[j];
@@ -22,30 +26,29 @@ void ordernar(int n, float *p)
             }
     }
 }
-
 int main()
 {
 
-    unsigned int n;
+    unsigned int n; // tipo inteiro sem sinal, pois arrays não recebem tamanho negativo.
     printf ("tamanho do vetor: \n");
-    scanf ("%d", &n);
-    float *p;
-    p = malloc(n * sizeof(float) );
+    scanf ("%d", &n); // É definido pelo usuário o tamanho do vetor
+    float *p; // Definido ponteiro do tipo float
+    p = malloc(n * sizeof(float) ); // Definida a alocação dinâmica de memoria para o ponteiro "p" guardar o número de dados, do tipo float, definido pelo usuário
 
     printf ("preencha o vetor: \n");
-    for (int i=0; i<n; i++)
+    for (int i=0; i<n; i++) // laço de repetição criado para o preenchimento do vetor pelo usuário.
         {
             scanf ("%f", &p[i]);
         }
 
-    ordernar(n,*p);
+    qsort(p, n, sizeof(float), comparar); // função padrão do C/C++ para ordenar arrays
 
     printf ("vetor ordenado: \n");
-    for (int i=0; i<n; i++)
+    for (int i=0; i<n; i++) // laço de repetição criado para o impressão do array ordenador.
     {
         printf ("%f \n", p[i]);
     }
 
-    free(p);
+    free(p); // Liberação de memória do ponteiro p.
     return 0;
 }
