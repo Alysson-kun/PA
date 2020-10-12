@@ -13,7 +13,7 @@ void ordernar(int n, float *p)
             {
                 if(p[j]>p[j+1])
                 {
-                    int aux;
+                    float aux;
                     aux=p[j];
                     p[j]=p[j+1];
                     p[j+1]=aux;
