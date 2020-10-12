@@ -1,21 +1,25 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void comparar(const void * a, const void * b)
+int comparar(const void * a, const void * b)
 {
-    
-        if ( *(int*)a <= *(int*)b ) return 0;
+        if ( *(int*)a < *(int*)b ) return 0;
         if ( *(int*)a >  *(int*)b ) return 1;
 }
 
 
-void ordenar (void *p, unsigned int n, sizeof(float), float (*comparar) (float))
+void ordenar (float *p, unsigned int n, int (*pf) (const void*, const void*) )
 {
+    
+    int (*pf) (const void*, const void*)=comparar;
     for (int i=0; i<n; i++)
     {
             for (int j=0; j<n-1; j++)
             {
-                if((*comparar)(i,j)==1)
+                const void *a = p[j];
+                const void *b = p[j+1];
+
+                if((*pf)(a,b)==1)
                 {
                     float aux;
                     aux=p[j];
@@ -41,7 +45,7 @@ int main()
             scanf ("%f", &p[i]);
         }
 
-    qsort(p, n, sizeof(float), comparar);
+    ordenar(p, n, sizeof(float), pf);
 
     printf ("vetor ordenado: \n");
     for (int i=0; i<n; i++)
