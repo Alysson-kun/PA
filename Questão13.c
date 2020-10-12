@@ -1,36 +1,50 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(){
+/Implemente em linguagem C uma função em um programa de computador que leia n valores do
+tipo float e os apresente em ordem crescente. Utilize alocação dinâmica de memória para
+realizar a tarefa./
 
-//Implemente em linguagem C uma função em um programa de computador que leia n valores do tipo float e os apresente em ordem crescente. Utilize alocação dinâmica de memória para realizar a tarefa.
-
-    float *p;
-    unsigned int n;
-    printf ("tamanho do vetor: ");
-    scanf ("%d", &n);
-    p = malloc(n * sizeof(float) );
-    p[1]=2.5;
-    printf ("%f \n", p[1]);
-
-    /*printf ("preencha o vetor: ");
+void ordernar(int n, float *p)
+{
     for (int i=0; i<n; i++)
-        scanf ("%f \n", &p[i]);
-
-    for (int j=0; j<n; j++)
     {
-        int aux=0;
-        if (p[j]>p[j+1])
+            for (int j=0; j<n-1; j++)
+            {
+                if(p[j]>p[j+1])
+                {
+                    int aux;
+                    aux=p[j];
+                    p[j]=p[j+1];
+                    p[j+1]=aux;
+                }
+
+            }
+    }
+}
+
+int main()
+{
+
+    unsigned int n;
+    printf ("tamanho do vetor: \n");
+    scanf ("%d", &n);
+    float *p;
+    p = malloc(n * sizeof(float) );
+
+    printf ("preencha o vetor: \n");
+    for (int i=0; i<n; i++)
         {
-            aux=p[j];
-            p[j]=p[j+1];
-            p[j+1]=aux;
+            scanf ("%f", &p[i]);
         }
 
-    }
-    printf ("vetor ordenado: ");
+    ordernar(n,*p);
+
+    printf ("vetor ordenado: \n");
     for (int i=0; i<n; i++)
-        printf ("%f \n", p[i]);*/
+    {
+        printf ("%f \n", p[i]);
+    }
 
     free(p);
     return 0;
