@@ -14,9 +14,9 @@ int main()
     
     unsigned int n;
     printf ("tamanho do vetor: \n");
-    scanf ("%d", &n);
-    float *p;
-    p = malloc(n * sizeof(float) );
+    scanf ("%d", &n); // É difinido pelo usuário o tamanho do vetor
+    float *p; // Definido ponteiro do tipo float
+    p = malloc(n * sizeof(float) ); // Definida a alocação dinâmica de memoria para o ponteiro "p" guardar o número de dados, do tipo float, definido pelo usuário
     
     printf ("preencha o vetor: \n");
     for (int i=0; i<n; i++)
