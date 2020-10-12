@@ -38,7 +38,7 @@ int main()
             scanf ("%f", &p[i]);
         }
 
-    ordernar(n,*p);
+    ordernar(n,p);
 
     printf ("vetor ordenado: \n");
     for (int i=0; i<n; i++)
