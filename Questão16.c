@@ -74,16 +74,17 @@ int main()
 
     double tempo_1 = (t1f-t1i);
     double tempo_2 = (t2f-t2i); 
-
+    printf ("%lf, %lf " t1f, t1i);
     printf ("vetor ordenado: \n");
     for (int i=0; i<n; i++)
     {
         printf ("%f \n", p[i]);
     }
 
-    printf("\n Tempo da funcao ordenar (Milisec): %lf \n Tempo da funcao qsort (Milisec): %lf", (double)tempo_1, (double)tempo_2);
+    printf("Tempo da funcao ordenar (Milisec): %lf \n Tempo da funcao qsort (Milisec): %lf", tempo_1, tempo_2);
 
     free(p);
     free(b);
     return 0;
+    
 }
