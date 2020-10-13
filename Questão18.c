@@ -96,6 +96,12 @@ int main ()
 
     for (int i=0; i<linha_a; i++)
     {
+        free(C[i]);
+    }
+    free(C);
+
+    for (int i=0; i<linha_a; i++)
+    {
         free (A[i]);
     }
     free(A);
@@ -105,12 +111,6 @@ int main ()
         free (B[i]);
     }
     free(B);
-
-    for (int i=0; i<linha_a; i++)
-    {
-        free(C[i]);
-    }
-    free(C);
 
     return 0;
 }
