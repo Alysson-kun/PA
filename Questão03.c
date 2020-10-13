@@ -1,7 +1,6 @@
 #include<stdio.h>
 
 int main(){
-// DÍVIDA: não entendi i = *&*&j;
 // Questão 3: Se i e j são variáveis inteiras e p e q ponteiros para int, quais das seguintes expressões de atribuição são ilegais?
 
     int i, j;
