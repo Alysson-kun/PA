@@ -74,7 +74,7 @@ int main()
 
     double tempo_1 = (t1f-t1i);
     double tempo_2 = (t2f-t2i); 
-    printf ("%lf, %lf " t1f, t1i);
+    
     printf ("vetor ordenado: \n");
     for (int i=0; i<n; i++)
     {
