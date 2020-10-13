@@ -5,7 +5,8 @@
 escreva um pequeno programa exemplificando o uso deste recurso */
 
 /*Resposta: Segundo Pinho (201x), uma função é um aglomerado de comandos armazenado em um bloco, cujo qual, pode ser acessado através de um nome. Sendo assim, sabendo que um ponteiro dá acesso a um edereço através de um nome, um ponteiro para função guardaria o endereço de uma função na memória. Ou seja, ponteiro para função é um meio de acessar um conjunto de instruções guardadas em um lugar na memoria. */
-
+/* link 1: https://www.inf.pucrs.br/~pinho/PRGSWB/PonteirosParaFuncoes/PonteirosParaFuncoes.html */
+/* link 2: https://www.inf.pucrs.br/~pinho/LaproI/Funcoes/AulaDeFuncoes.htm */
 int multiplicacao (int n1, int n2)
 {
     return n1*n2;
