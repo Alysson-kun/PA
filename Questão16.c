@@ -68,7 +68,7 @@ int main()
 
     clock_t t2i = clock();
 
-    qsort(b, n, sizeof(float), comparar);
+    qsort(b, n, sizeof(float), comparar_qsort);
 
     clock_t t2f = clock();
 
