@@ -6,12 +6,12 @@ int main(){
     int i, j;
     int *p, *q;
 
-    p = i; // está incorreto, pois um ponteiro só pode atribuir endereços.
+    p = i; // ok
     q = &j; // ok
-    p = &*&i; // o conteúdo do endereço de i é igual ao endereço de i, logo o endereço do endereço de i não faz sentido.
-    i = (*&)j; // *& retorna o conteúdo do endereço de nada
+    p = &*&i; // ok
+    i = (*&)j; // "*" pega o conteúdo de um endereço de memória e o "&" pega o endereço de memória de uma variável. (*&) está tentando obter o conteúdo de um operador e não faz sentido.
     i = *&j; // ok
-    i = *&*&j; // n sei ainda
-    q = *p; // está incorreto, pois um ponteiro só pode atribuir endereços.
+    i = *&*&j; // ok
+    q = *p; //ok
     i = (*p)++ + *q; // ok
 }
